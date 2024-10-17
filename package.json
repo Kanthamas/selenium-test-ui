@@ -1,0 +1,16 @@
+{
+	"name": "test_ui",
+	"version": "1.0.0",
+	"main": "index.js",
+  "type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Kanthamas",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"selenium-webdriver": "^4.25.0"
+	}
+}
