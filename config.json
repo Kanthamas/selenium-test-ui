@@ -1,5 +1,8 @@
 {
 	"username": "standard_user",
 	"password": "secret_sauce",
-	"products": ["T-Shirt", "flashlight", "Backpack"]
+	"products": ["T-Shirt", "flashlight", "Backpack"],
+	"firstName": "Sherlock",
+	"lastName": "Holmes",
+	"postalCode": "NW1 6XE"
 }
