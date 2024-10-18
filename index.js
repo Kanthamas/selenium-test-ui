@@ -178,34 +178,18 @@ async function handleCartAndCheckout(driver) {
 
 // 4. กรอกข้อมูลผู้สั่งซื้อ จากนั้นกดปุ่ม Continue เพื่อดำเนินการต่อ
 
-// Helper function to fill in the checkout information
 async function fillCheckoutInformation(driver) {
 	let details = [];
 	try {
-		// Fill in first name
 		await driver.findElement(By.id("first-name")).sendKeys(config.firstName);
-
-		// Fill in last name
 		await driver.findElement(By.id("last-name")).sendKeys(config.lastName);
-
-		// Fill in postal code
 		await driver.findElement(By.id("postal-code")).sendKeys(config.postalCode);
-
-		// Click the "Continue" button
 		await driver.findElement(By.id("continue")).click();
 
 		logTestResult("Fill Checkout Information", "Success", details);
 	} catch (error) {
 		details.push(`Error filling checkout information: ${error.message}`);
 		logTestResult("Fill Checkout Information", "Failed", details);
-		console.error(error);
-	}
-}
-
-async function handleFillCheckoutInformation(driver) {
-	try {
-		await fillCheckoutInformation(driver); // Call the function to fill in checkout info
-	} catch (error) {
 		console.error(error);
 	}
 }
@@ -272,14 +256,16 @@ async function verifyCheckoutTotals(driver) {
 // 6. หากการสั่งซื้อสำเร็จ จะต้องปรากฏหน้าจอ Thank you for your order!
 
 async function verifyThankYouForYourOrder(driver) {
+	const expectedString = "Thank you for your order!";
 	let details = [];
+
 	try {
 		let thankYouForYourOrder = await driver.findElement(
-			By.xpath(`//*[contains(text(), "Thank you for your order!")]`)
+			By.xpath(`//*[contains(text(), "${expectedString}")]`)
 		);
 
 		if (thankYouForYourOrder) {
-			details.push('"Thank you for your order!" is found on the screen.');
+			details.push(`"${expectedString}" is found on the screen.`);
 		}
 		logTestResult("Verify Thank You Message", "Success", details);
 	} catch (error) {
@@ -298,7 +284,7 @@ async function testUI() {
 		await login(driver);
 		await addProductsToCart(driver);
 		await handleCartAndCheckout(driver);
-		await handleFillCheckoutInformation(driver);
+		await fillCheckoutInformation(driver);
 		await verifyCheckoutTotals(driver);
 		await verifyThankYouForYourOrder(driver);
 	} catch (error) {

@@ -3,7 +3,7 @@
     "action": "Login",
     "result": "Success",
     "details": [],
-    "timestamp": "2024-10-17T16:18:19.775Z"
+    "timestamp": "2024-10-18T07:02:16.050Z"
   },
   {
     "action": "Add Products to Cart",
@@ -13,7 +13,7 @@
       "Added Test.allTheThings() T-Shirt (Red) to cart.",
       "Added Sauce Labs Backpack to cart."
     ],
-    "timestamp": "2024-10-17T16:18:20.187Z"
+    "timestamp": "2024-10-18T07:02:16.785Z"
   },
   {
     "action": "Remove Product",
@@ -22,19 +22,19 @@
       "Found product: Backpack",
       "Removed Backpack from cart."
     ],
-    "timestamp": "2024-10-17T16:18:20.282Z"
+    "timestamp": "2024-10-18T07:02:16.919Z"
   },
   {
     "action": "Proceed to Checkout",
     "result": "Success",
     "details": [],
-    "timestamp": "2024-10-17T16:18:20.329Z"
+    "timestamp": "2024-10-18T07:02:16.989Z"
   },
   {
     "action": "Fill Checkout Information",
     "result": "Success",
     "details": [],
-    "timestamp": "2024-10-17T16:18:20.570Z"
+    "timestamp": "2024-10-18T07:02:17.428Z"
   },
   {
     "action": "Verify Checkout Totals",
@@ -43,7 +43,7 @@
       "Subtotal: $31.98",
       "Total: $34.54 (Expected: $34.54), Tax: $2.56 (Expected: $2.56)"
     ],
-    "timestamp": "2024-10-17T16:18:20.615Z"
+    "timestamp": "2024-10-18T07:02:17.505Z"
   },
   {
     "action": "Verify Thank You Message",
@@ -51,6 +51,6 @@
     "details": [
       "\"Thank you for your order!\" is found on the screen."
     ],
-    "timestamp": "2024-10-17T16:18:20.663Z"
+    "timestamp": "2024-10-18T07:02:17.600Z"
   }
 ]
